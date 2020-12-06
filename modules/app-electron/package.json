@@ -25,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/emmda/emmda/issues"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.2"
   }
 }
