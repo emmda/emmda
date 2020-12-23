@@ -7,6 +7,14 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface EmmInput {
+        "allowClear": boolean;
+        "bordered": boolean;
+        "defaultValue": string;
+        "disabled": boolean;
+        "maxLength": number | undefined;
+        "size": 'large' | 'middle' | 'small' | undefined;
+        "type": string | undefined;
+        "value": string | undefined;
     }
 }
 declare global {
@@ -22,6 +30,15 @@ declare global {
 }
 declare namespace LocalJSX {
     interface EmmInput {
+        "allowClear"?: boolean;
+        "bordered"?: boolean;
+        "defaultValue"?: string;
+        "disabled"?: boolean;
+        "maxLength"?: number | undefined;
+        "onPressEnter"?: (event: CustomEvent<EmmInput>) => void;
+        "size"?: 'large' | 'middle' | 'small' | undefined;
+        "type"?: string | undefined;
+        "value"?: string | undefined;
     }
     interface IntrinsicElements {
         "emm-input": EmmInput;
